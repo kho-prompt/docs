@@ -1,16 +1,14 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [Giới thiệu](README.md)
 
-## Getting Started
+## Sản phẩm
 
-* [Quickstart](getting-started/quickstart.md)
-* [Publish your docs](getting-started/publish-your-docs.md)
+* [Prompt cơ bản](san-pham/prompt.md)
+* [Prompt Kit](san-pham/prompt-kit.md)
+* [Automation Flow](san-pham/automation-flow.md)
 
-## Basics
+## Kiếm tiền
 
-* [Editor](basics/editor.md)
-* [Markdown](basics/markdown.md)
-* [Images & media](basics/images-and-media.md)
-* [Interactive blocks](basics/interactive-blocks.md)
-* [Integrations](basics/integrations.md)
+* [Bán Prompt của bạn](tac-gia/ban-prompt.md)
+* [Phí nền tảng](tac-gia/phi-nen-tang.md)
