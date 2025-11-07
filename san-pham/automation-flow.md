@@ -1,33 +1,28 @@
 # Automation Flow
 
-Automation Flow là workflow tải lên (n8n, Make.com, Zapier hoặc JSON tùy chỉnh) cho phép người khác tải về và tái sử dụng trong dự án tự động hóa.
+Automation Flow là file workflow (n8n, Make.com, Zapier, v.v.) đã được cài sẵn bước kết nối và logic. Bạn tải về để chạy lại trên tài khoản của mình thay vì xây từ đầu.
 
-## Nội dung cần có
+## Tải và dùng workflow
 
-- **File workflow**: định dạng `.json` hoặc `.zip`, lưu tại trường `workflow_file`.
-- **Platform**: chọn `n8n`, `make`, `zapier` hoặc `other` để người mua lọc.
-- **Phiên bản**: `workflow_version` giúp thông báo khi bạn cập nhật.
-- **Mô tả & metadata**: viết rõ mục đích, input, output, và các ứng dụng bên thứ ba đang kết nối.
-- **SEO**: điền `meta_title`, `meta_description`, OG image để trang chi tiết dễ index.
+1. Chọn filter theo nền tảng bạn đang dùng để rút gọn danh sách.
+2. Vào trang chi tiết để xem mô tả, danh sách ứng dụng được kết nối và video/ảnh minh họa.
+3. Nhấn **Tải xuống**:
+   - Nếu workflow miễn phí → tải ngay sau khi đăng nhập.
+   - Nếu workflow trả phí → thêm vào giỏ và thanh toán, sau đó nút tải sẽ mở khóa vĩnh viễn.
+4. Import file vào n8n/Make/Zapier, cập nhật khóa API của riêng bạn rồi bật chạy.
 
-## Quy trình phát hành
+## Theo dõi phiên bản
 
-1. Tải file + nhập thông tin → hệ thống ghi nhận trạng thái `pending`.
-2. Admin test workflow, kiểm tra nội dung nhạy cảm.
-3. Khi duyệt, trạng thái chuyển `approved`, `published_at` được set và listing xuất hiện trên marketplace.
+- Mỗi workflow có thông tin phiên bản. Khi tác giả cập nhật bản mới, bạn sẽ thấy ghi chú thay đổi (ví dụ "fix lỗi Google Sheets"), chỉ cần tải lại file mới nhất.
+- Bản đã tải trước đó vẫn nằm trong lịch sử của bạn để đối chiếu khi cần.
 
-## Mua và tải xuống
+## Đánh giá & hỗ trợ
 
-- Workflow miễn phí: người dùng đăng nhập, nhấn tải xuống là nhận file, hệ thống cộng `downloads_count`.
-- Workflow trả phí: người mua thêm vào giỏ, thanh toán. Sau khi order `paid`, bản ghi `user_automation_flow_purchases` tạo ra quyền tải không giới hạn.
-- Mọi lượt tải (kể cả free) đều cập nhật `downloads_count` để bạn đo nhu cầu.
+- Nhấn nút Helpful/Not Helpful sau khi chạy thử để giúp những người dùng khác.
+- Nếu workflow yêu cầu thêm hướng dẫn, dùng phần FAQ hoặc gửi bình luận; tác giả sẽ phản hồi trực tiếp dưới trang.
 
-## Chỉ số & đánh giá
+## Mẹo cho người mới
 
-- `views`, `downloads_count`, `purchases_count` cho biết độ quan tâm.
-- Người mua có thể vote `Helpful` / `Unhelpful`. Mỗi user chỉ vote 1 lần, dữ liệu lưu ở `automation_flow_ratings`.
-
-## Cập nhật phiên bản
-
-- Bảng `automation_flow_versions` lưu lịch sử (filename, changelog, semver).
-- Khi đăng version mới bạn nên mô tả thay đổi để người đã mua biết lý do cập nhật.
+- Luôn đọc phần "Chuẩn bị" để biết những dịch vụ nào cần tạo API key trước.
+- Chạy workflow ở chế độ test trước khi bật lịch chạy tự động.
+- Lưu lại file gốc và file đã tùy chỉnh để dễ dàng cập nhật khi có phiên bản mới.
