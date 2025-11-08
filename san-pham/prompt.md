@@ -1,37 +1,25 @@
 # Prompt cơ bản
 
-Prompt là nội dung AI do người dùng tạo và xuất bản trên Kho Prompt. Mỗi prompt lưu lại trạng thái duyệt, thông tin giá và số liệu tương tác để người mua đánh giá chất lượng.
+Prompt là hướng dẫn sẵn cho ChatGPT, Claude, Gemini… Bạn chỉ việc nhập dữ liệu của mình rồi bấm gửi. Mỗi prompt trên Kho Prompt đều đã được đặt tên, mô tả công dụng và có ảnh minh họa để bạn dễ lựa chọn.
 
-## Thành phần chính
+## Cách tìm và xem prompt
 
-- **Tên & slug**: slug tạo tự động từ tên và luôn duy nhất để bạn có URL sạch.
-- **Nội dung**: trường `content` nhận văn bản đầy đủ, hỗ trợ chế độ `prompt_type = text|json` và `prompt_output = text|image|video`.
-- **Mô tả**: `description` (ngắn) và `full_description` (dài) giúp người xem hiểu lợi ích trước khi mua.
-- **Giá**: `price` lưu tiền VNĐ. `0` = miễn phí, > 0 = trả phí.
-- **Danh mục & thẻ**: `category_id` + nhiều `tags` để người mua tìm kiếm nhanh, đồng thời prompt có thể thuộc nhiều Prompt Kit.
-- **Ảnh bìa**: khuyến nghị tải ảnh minh họa để nổi bật trên trang danh sách.
+1. Mở trang Kho Prompt và dùng ô tìm kiếm hoặc bộ lọc danh mục/tag.
+2. Nhấn vào một prompt để xem trang chi tiết gồm: mô tả ngắn, lợi ích chính, ví dụ áp dụng và câu hỏi thường gặp.
+3. Nếu thấy hữu ích, bạn có thể lưu prompt vào mục Yêu thích để dùng lại.
 
-## Quy trình duyệt
+## Prompt miễn phí vs. trả phí
 
-1. Tác giả tạo prompt → trạng thái `pending`.
-2. Admin kiểm tra nội dung. Có thể yêu cầu chỉnh sửa ngay trong phần ghi chú.
-3. Khi đạt yêu cầu, trạng thái chuyển sang `approved` và prompt hiện công khai. Nếu vi phạm, prompt bị `rejected` và ẩn khỏi marketplace.
+- **Miễn phí:** chỉ cần đăng nhập là xem toàn bộ nội dung và copy được ngay.
+- **Trả phí:** trước khi thanh toán bạn chỉ nhìn thấy phần mô tả. Sau khi mua, nội dung đầy đủ sẽ mở khóa vĩnh viễn cho tài khoản của bạn. Bạn có thể quay lại bất cứ lúc nào tại mục "Đã mua".
 
-## Quyền truy cập nội dung
+## Đánh giá & chia sẻ
 
-- Prompt miễn phí: ai đã đăng nhập cũng xem trọn nội dung.
-- Prompt trả phí: khách chỉ thấy phần mô tả. Nội dung đầy đủ chỉ mở sau khi đơn hàng được đánh dấu `paid` và bản ghi `user_prompt_purchases` được tạo.
-- Quyền xem luôn gắn với tài khoản đã mua, nên bạn có thể cập nhật nội dung mà không lo thất thoát.
+- Nhấn nút 👍 hoặc 👎 để cho tác giả biết prompt có hữu ích hay không.
+- Sử dụng nút "Chia sẻ" để gửi link prompt cho bạn bè; họ vẫn cần tài khoản để xem nội dung trả phí.
 
-## Chỉ số theo dõi
+## Mẹo sử dụng prompt hiệu quả
 
-- `views`: tổng lượt xem trang chi tiết.
-- `helpful_count` / `unhelpful_count`: số lượt đánh giá hữu ích để nổi bật prompt chất lượng.
-- `saved_prompts`: số người lưu prompt này vào danh sách yêu thích.
-
-## Mẹo viết nhanh
-
-- Mô tả rõ bài toán, dữ liệu đầu vào và kỳ vọng đầu ra.
-- Đưa ví dụ mẫu ngay trong nội dung để người dùng copy-paste.
-- Sử dụng thẻ miêu tả ngành nghề (marketing, HR, tài chính...) để tối ưu tìm kiếm.
-- Nếu bán trả phí, thêm FAQ ngắn giải thích vì sao nội dung đáng tiền.
+- Đọc kỹ phần "Hướng dẫn nhập liệu" để chuẩn bị thông tin đầu vào.
+- Nếu prompt gợi ý nhiều bước, hãy chạy thử với dữ liệu nhỏ trước rồi mở rộng.
+- Ghi chú lại những tuỳ biến của riêng bạn bằng tính năng "Lưu bản chỉnh sửa" để không quên cấu hình.

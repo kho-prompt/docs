@@ -1,37 +1,28 @@
 # Prompt Kit
 
-Prompt Kit là bộ sưu tập prompt do bạn tự tạo để gom nội dung theo chủ đề, bán trọn gói hoặc chia sẻ nội bộ. Một kit có thể chứa prompt của bạn hoặc prompt công khai của người khác (nếu được phép chia sẻ).
+Prompt Kit là bộ sưu tập gồm nhiều prompt liên quan tới cùng một chủ đề (ví dụ: chiến dịch email, quy trình tuyển dụng, chăm sóc khách hàng). Bạn mở một kit là thấy toàn bộ prompt cần thiết và có thể dùng theo đúng thứ tự gợi ý.
 
-## Khi nào nên dùng Prompt Kit?
+## Lợi ích chính
 
-- Muốn bán combo nhiều prompt với một mức giá.
-- Cần phân quyền cho đồng đội xem/chỉnh sửa prompt trong dự án riêng.
-- Muốn tổ chức prompt theo quy trình (ví dụ bộ 5 bước viết email marketing).
+- **Tiết kiệm thời gian:** không cần tự ghép prompt lẻ, mọi thứ đã đóng gói.
+- **Dễ làm theo:** mỗi kit đi kèm mô tả ngắn cho từng bước để bạn hiểu phải làm gì tiếp theo.
+- **Chia sẻ cho đội nhóm:** bạn có thể gửi link kit cho đồng nghiệp hoặc cấp quyền xem/chỉnh sửa nếu cùng làm dự án.
 
-## Trường dữ liệu nổi bật
+## Cách sử dụng Prompt Kit
 
-- **Tên, mô tả, slug**: phục vụ SEO và hiển thị trên marketplace.
-- **Ảnh & danh mục**: giúp kit xuất hiện ở đúng chuyên mục.
-- **Giá**: dạng `decimal`, hỗ trợ cả gói miễn phí và trả phí.
-- **Tag**: kế thừa hệ thống tag chung để người dùng lọc nhanh.
-- **Chia sẻ**: `sharing_mode` quyết định phạm vi truy cập.
+1. Truy cập trang kit và đọc phần giới thiệu để biết bộ này giải quyết vấn đề gì.
+2. Duyệt danh sách prompt bên trong. Một số kit sẽ đánh số bước (B1, B2…) để bạn thực hiện tuần tự.
+3. Nhấn vào prompt bất kỳ để mở trong tab mới và nhập dữ liệu của riêng bạn.
+4. Khi hoàn thành, quay lại trang kit để tiếp tục bước kế tiếp hoặc lưu toàn bộ kit vào mục "Kit yêu thích".
 
-## Chế độ chia sẻ
+## Chia sẻ & phân quyền
 
-| Chế độ | Mô tả | Khi dùng |
-| --- | --- | --- |
-| `private` | Chỉ chủ sở hữu xem | Kit nháp, nội bộ |
-| `public` | Ai cũng thấy, hiển thị trên trang cá nhân | Dùng cho kit public/mua bán |
-| `link` | Ai có link chứa `share_token` mới xem được | Chia sẻ kín cho khách hàng |
-| `users` | Chỉ user trong `kit_shares` được xem/chỉnh | Làm việc nhóm, giao quyền tạm thời |
+- **Công khai:** kit xuất hiện trên trang cá nhân, ai cũng xem được.
+- **Link bí mật:** chỉ ai có link mới mở được. Rất hữu ích khi bạn gửi cho khách hàng.
+- **Chia sẻ theo user:** nhập email hoặc username để cấp quyền xem/chỉnh, đồng thời đặt ngày hết hạn nếu cần.
 
-## Quản lý quyền chi tiết
+## Gợi ý cho người dùng
 
-- Mỗi bản ghi trong `kit_shares` lưu `can_view`, `can_edit` và `expires_at`.
-- Có thể thu hồi quyền bất cứ lúc nào bằng tính năng "Revoke".
-- Token chia sẻ sinh tự động, bạn có thể reset nếu link bị lộ.
-
-## Lưu ý triển khai
-
-- Trật tự prompt trong kit lưu tại bảng `kit_prompt` (`order`), nên hãy sắp xếp để người dùng dễ theo dõi.
-- Nếu bán kit trả phí, nội dung bên trong sẽ được khóa cho đến khi đơn hàng hoàn tất tương tự prompt đơn lẻ.
+- Nếu mới bắt đầu, ưu tiên kit miễn phí để làm quen.
+- Có thể kết hợp prompt của nhiều kit bằng cách lưu chúng vào cùng một Prompt Kit cá nhân.
+- Khi mua kit trả phí, bạn sẽ sở hữu tất cả prompt bên trong và dùng riêng từng prompt ở trang chi tiết.
